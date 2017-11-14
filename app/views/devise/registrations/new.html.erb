@@ -1,17 +1,27 @@
-<h2>Sign up</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
-  </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
+<div class="container">
+	<div class="row"> 
 
-<%= render "devise/shared/links" %>
+
+				<div class="text-center"><h1>Sign up</h1></div>
+				
+				<%= render 'shared/bigform' %>
+
+		</div>
+	</div>
+
+<!--</div>
+</div>
+</div>-->
+<div class="img-center small">
+	<%= render "devise/shared/links" %>
+		<img src="http://res.cloudinary.com/caroheymes/image/upload/c_scale,w_60/v1510593635/intuit_q7zbv3.png" alt="INTUIT">
+</div>
+	
+<div class="col-md-12 text-center small-font">
+	© 2017 Intuit, Inc. All rights reserved. Intuit, QuickBooks, QB, TurboTax, ProConnect and Mint are registered trademarks of Intuit Inc.<br>Terms and conditions, features, support, pricing, and service options subject to change without notice.
+</div>
+
+

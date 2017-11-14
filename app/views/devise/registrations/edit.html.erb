@@ -1,27 +1,62 @@
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
+<%= render "devise/shared/links" %>
+	<div class="container text-center">
+	    <div class="row">        
+	        <div class="cols-sm-4 card text-center">
+					<div class="card-small-padding text-center">
+						<ul class="list-inline">
+							<li>
+								<a href="https://turbotax.intuit.com/">
+								<img src="http://res.cloudinary.com/caroheymes/image/upload/c_scale,h_20,w_20/v1510593712/turbotax_kx7bvv.png" alt=""> turbotax
+								</a>
+							</li>
+							<li>
+								<a href="https://quickbooks.intuit.com/">
+								<img src="http://res.cloudinary.com/caroheymes/image/upload/c_scale,h_20,w_20/v1510593635/quickbooks_c4mc91.png" alt=""> quickbooks
+								</a>
+							</li>
+							<li>
+								<a href="https://www.mint.com/">
+								<img src="http://res.cloudinary.com/caroheymes/image/upload/c_scale,h_20/v1510594034/mint_ktbtd3.png" alt=""> mint
+								</a>
+							</li>
+						</ul>
+					</div>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
     <%= f.input :email, required: true, autofocus: true %>
+    <%= f.input :phone, required: false, autofocus: true %>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
     <% end %>
 
-    <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
+    <%= f.input :password, autocomplete: "off", hint: "Don't reuse an old passwordr", required: false %>
     <%= f.input :password_confirmation, required: false %>
-    <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+    <%= f.input :current_password, hint: "Type your password to save changes", required: true %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Update" %>
+    <%= f.button :submit, "update" %>
   </div>
 <% end %>
 
 <h3>Cancel my account</h3>
 
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<p>Unhappy? <%= link_to "Delete my account", registration_path(resource_name), data: { confirm: "Sure ? We'll miss you" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
+</div>
+</div>
+</div>
+	
+<div class="img-center small">
+		<img src="http://res.cloudinary.com/caroheymes/image/upload/c_scale,w_60/v1510593635/intuit_q7zbv3.png" alt="INTUIT">
+</div>
+	
+<div class="col-md-12 text-center small-font">
+	© 2017 Intuit, Inc. All rights reserved. Intuit, QuickBooks, QB, TurboTax, ProConnect and Mint are registered trademarks of Intuit Inc.<br>Terms and conditions, features, support, pricing, and service options subject to change without notice.
+</div>

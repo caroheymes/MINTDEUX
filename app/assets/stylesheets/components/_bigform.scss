@@ -1,10 +1,5 @@
-body{
-  background: (#eceef1 !important);
-  font-family: 'Open Sans', sans-serif;
-  color:  #404040;
-  font-size: (1.3em !important);
-  line-height: 1.6em;
-  display: block;
+.clear{
+	clear:both;
 }
 
 .img-center{
@@ -65,40 +60,31 @@ body{
 
 
 .a:hover{
-
+text-decoration: (none !important); 
 }
 
-.btn-small{
-	border: 1px solid #ccc;
-	background-color: #0077C5;
-	color: white;
-  	padding: 10px 15px;
-  	border-radius: 3px;
-}
-
-.btn-small:hover{
-	text-decoration :none;
-	color : white;
-}
 
 .btn-big{
-	background-color: (#0077C5 !important);
+	background-color:(#0077C5 !important);
     margin-top: 28px;
     padding: 10px 60px;
-    color: (white !important);
+    color:(white !important);
     cursor: pointer;
     border-radius: 3px;
 }
 
-.btn-big:hover{
-	text-decoration :none;
-}	
+.btn:hover{
+	background-color:(#0077C5 !important);
+	color:(white !important);
+	text-decoration: (none !important); 
+	font-weight: bold;
+	}
 
 .form{
  	display: inline-block;
  }
  .control-label{
- 	text-align: (left !important);
+ 	text-align:(left !important);
  }
 
 
@@ -119,4 +105,3 @@ body{
     }
   }
 }
-// Specific CSS for your home-page
