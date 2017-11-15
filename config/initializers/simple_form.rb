@@ -1,3 +1,4 @@
+
 # Use this setup block to configure all options available in SimpleForm.
 SimpleForm.setup do |config|
   # Wrappers are used by the form builder to generate a
@@ -5,18 +6,8 @@ SimpleForm.setup do |config|
   # wrapper, change the order or even add your own to the
   # stack. The options given below are used to wrap the
   # whole input.
-  #VU SUR https://github.com/plataformatec/simple_form/wiki/Custom-Wrappers
-  config.wrappers :inline_checkbox, :tag => 'div', :class => 'control-group', :error_class => 'error' do |b|
-    b.use :html5
-    b.wrapper :tag => 'div', :class => 'controls' do |ba|
-      ba.use :label_input, :wrap_with => { :class => 'checkbox inline' }
-      ba.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
-      ba.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
-    end
-  
-
-      
-      
+  config.wrappers :default, class: :input,
+    hint_class: :field_with_hint, error_class: :field_with_errors do |b|
     ## Extensions enabled by default
     # Any of these extensions can be disabled for a
     # given input by passing: `f.input EXTENSION_NAME => false`.
@@ -25,7 +16,7 @@ SimpleForm.setup do |config|
 
     # Determines whether to use HTML5 (:email, :url, ...)
     # and required attributes
-   
+    b.use :html5
 
     # Calculates placeholders automatically from I18n
     # You can also pass a string as f.input placeholder: "Placeholder"
@@ -63,7 +54,7 @@ SimpleForm.setup do |config|
     # use the component :full_error, like:
     #
     # b.use :full_error, wrap_with: { tag: :span, class: :error }
-  #end
+  end
 
   # The default wrapper to be used by the FormBuilder.
   config.default_wrapper = :default
